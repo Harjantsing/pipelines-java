@@ -9,8 +9,4 @@ trigger:
 pool:
   default
 
-steps:
-- task: JavaToolInstaller@0
-  inputs:
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
+
