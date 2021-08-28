@@ -10,12 +10,6 @@ pool:
   default
 
 steps:
-- task: Ant@1
+- task: ShellScript@2
   inputs:
-    workingDirectory: ''
-    buildFile: 'build.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '16.0.1'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
+    scriptPath: 'build.sh'
