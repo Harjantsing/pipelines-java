@@ -10,14 +10,12 @@ pool:
   default
 
 steps:
-- task: Gradle@2
+- task: Ant@1
   inputs:
     workingDirectory: ''
-    gradleWrapperFile: 'gradlew'
-    gradleOptions: '-Xmx3072m'
+    buildFile: 'build.xml'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    jdkVersionOption: '16.0.1'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'build'
+    testResultsFiles: '**/TEST-*.xml
